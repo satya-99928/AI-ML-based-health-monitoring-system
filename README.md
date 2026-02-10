@@ -36,3 +36,8 @@ The system runs autonomously on Raspberry Pi after initial setup. No web applica
 
 ## License
 This project is for academic use.
+## Important Files
+[randon_forest_train.py](https://github.com/user-attachments/files/25202475/randon_forest_train.py)
+[health.py](https://github.com/user-attachments/files/25202486/health.py)
+## Demo Video
+https://youtu.be/D8LGl8KfOSI
