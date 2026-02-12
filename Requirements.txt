@@ -1,0 +1,8 @@
+numpy
+scipy
+smbus2
+scikit-learn
+pillow
+adafruit-circuitpython-ssd1306
+adafruit-circuitpython-mlx90614
+adafruit-circuitpython-mcp3xxx
