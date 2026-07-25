@@ -1,4 +1,4 @@
-# Health Monitoring System
+# AI/ML Based Health Monitoring System
 
 ## Overview
 This project implements a headless IoT-based health monitoring system using a Raspberry Pi. The system continuously measures heart rate, blood oxygen saturation (SpO₂), body temperature, and ECG signals, processes the data locally, logs it for analysis, and applies machine learning to assess patient health status.
