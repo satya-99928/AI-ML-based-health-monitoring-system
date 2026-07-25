@@ -11,3 +11,4 @@ pandas
 scikit-learn
 joblib
 scipy
+pip install -r requirements.txt
