@@ -1,38 +1,63 @@
 # AI/ML Based Health Monitoring System
 
-## Overview
-This project implements a headless IoT-based health monitoring system using a Raspberry Pi. The system continuously measures heart rate, blood oxygen saturation (SpO₂), body temperature, and ECG signals, processes the data locally, logs it for analysis, and applies machine learning to assess patient health status.
+A Raspberry Pi–based IoT health monitoring system that measures
+- Heart Rate (BPM)
+- Blood Oxygen Level (SpO₂)
+- Body Temperature
+- ECG waveform
 
-## Hardware Components
-- Raspberry Pi 4
-- MAX30102 (Heart Rate & SpO₂ Sensor)
-- AD8232 ECG Sensor
-- MCP3008 ADC
-- MLX90614 Temperature Sensor
-- 0.96" OLED Display (Vitals & ECG waveform)
-- 1.3" OLED Display (Health status & risk)
-
-## Software & Tools
-- Python
-- Raspberry Pi OS (Headless)
-- Adafruit CircuitPython Libraries
-- NumPy, SciPy
-- Pandas
-- Scikit-learn (Random Forest)
+The system operates fully offline, logs data locally, and uses machine learning
+to predict patient health risk.
 
 ## Features
-- Real-time vital sign monitoring
-- ECG waveform visualization
-- Dual OLED display architecture
-- CSV-based data logging
-- Machine learning-based health status prediction
-- Fully headless operation
+- MAX30102 for BPM & SpO₂
+- MLX90614 for body temperature
+- AD8232 ECG with waveform display
+- Dual OLED display (0.96" + 1.3")
+- Local CSV dataset generation
+- Machine learning–based risk prediction
+- Headless operation (no cloud dependency)
+
+## Hardware Used
+- Raspberry Pi
+- MAX30102 Pulse Oximeter
+- MLX90614 Temperature Sensor
+- AD8232 ECG Sensor
+- MCP3008 ADC
+- OLED Displays (0.96", 1.3")
+
+## Software Stack
+- Python
+- NumPy, SciPy
+- Adafruit CircuitPython Libraries
+- Scikit-learn (Random Forest)
+
+## How It Works
+1. Sensors collect real-time physiological data
+2. Data is processed locally on Raspberry Pi
+3. Vitals are displayed on OLED screens
+4. Data is stored in CSV format
+5. ML model predicts health risk based on trends
+
+## Dataset
+The dataset includes:
+- BPM
+- SpO₂
+- Temperature
+- ECG Voltage
+
+Stored locally as CSV for model training.
 
 ## Machine Learning
-A Random Forest classifier is trained on extracted physiological features to classify patient health conditions as Normal, Warning, or Critical.
+- Model: Random Forest Classifier
+- Training: Offline using collected dataset
+- Inference: Local (no internet required)
 
-## Deployment
-The system runs autonomously on Raspberry Pi after initial setup. No web application, mobile app, or cloud services are used.
+## Use Cases
+- Home health monitoring
+- Elderly care
+- Remote clinics
+- Academic research
 
-## License
-This project is for academic use.
+## Authors
+- Satyajit Panda
