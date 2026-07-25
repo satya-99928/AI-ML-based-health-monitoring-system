@@ -1,63 +1,124 @@
-# AI/ML Based Health Monitoring System
+# AI/ML Based Patient Health Monitoring and Alerting Robot Using Raspberry Pi
 
-A Raspberry Pi–based IoT health monitoring system that measures
+## Overview
+
+This project is an AI-powered health monitoring system developed using Raspberry Pi 4.
+
+The system continuously monitors:
+
 - Heart Rate (BPM)
-- Blood Oxygen Level (SpO₂)
+- Blood Oxygen Saturation (SpO₂)
 - Body Temperature
-- ECG waveform
+- ECG Signal
 
-The system operates fully offline, logs data locally, and uses machine learning
-to predict patient health risk.
+An AI/ML model predicts whether the patient is:
 
-## Features
-- MAX30102 for BPM & SpO₂
-- MLX90614 for body temperature
-- AD8232 ECG with waveform display
-- Dual OLED display (0.96" + 1.3")
-- Local CSV dataset generation
-- Machine learning–based risk prediction
-- Headless operation (no cloud dependency)
+- Normal
+- Abnormal
+- Critical
+
+The project also provides:
+
+- OLED Displays
+- RGB Status LED
+- Active Buzzer Alerts
+- Local AI Inference
+- Dataset Generation
+
+---
 
 ## Hardware Used
-- Raspberry Pi
-- MAX30102 Pulse Oximeter
-- MLX90614 Temperature Sensor
+
+- Raspberry Pi 4 Model B (8GB)
+- MAX30102
+- MLX90614
 - AD8232 ECG Sensor
 - MCP3008 ADC
-- OLED Displays (0.96", 1.3")
+- SSD1306 OLED
+- SH1106 OLED
+- RGB LED
+- Active Buzzer
 
-## Software Stack
-- Python
-- NumPy, SciPy
-- Adafruit CircuitPython Libraries
-- Scikit-learn (Random Forest)
+---
 
-## How It Works
-1. Sensors collect real-time physiological data
-2. Data is processed locally on Raspberry Pi
-3. Vitals are displayed on OLED screens
-4. Data is stored in CSV format
-5. ML model predicts health risk based on trends
+## Software
 
-## Dataset
-The dataset includes:
+- Python 3
+- Raspberry Pi OS
+- Random Forest Classifier
+- Scikit-Learn
+- Pandas
+- NumPy
+
+---
+
+## Folder Structure
+
+```
+AI-Health-Monitor/
+│
+├── health.py
+├── train_model.py
+├── predict.py
+├── health_dataset.csv
+├── health_model.pkl
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Installation
+
+Clone repository
+
+```
+git clone https://github.com/satya-99928/AI-ML-based-health-monitoring-system.git
+```
+
+Install packages
+
+```
+pip install -r requirements.txt
+```
+
+Run
+
+```
+python health.py
+```
+
+---
+
+## Machine Learning
+
+Algorithm Used:
+
+- Random Forest Classifier
+
+Features
+
 - BPM
 - SpO₂
 - Temperature
-- ECG Voltage
+- ECG RMS
 
-Stored locally as CSV for model training.
+Output
 
-## Machine Learning
-- Model: Random Forest Classifier
-- Training: Offline using collected dataset
-- Inference: Local (no internet required)
+- Normal
+- Abnormal
+- Critical
 
-## Use Cases
-- Home health monitoring
-- Elderly care
-- Remote clinics
-- Academic research
+---
 
 ## Authors
+
 - Satyajit Panda
+
+---
+
+## License
+Educational purpose only
+
+Academic Project
+SOA University
